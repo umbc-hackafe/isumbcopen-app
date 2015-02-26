@@ -1,6 +1,7 @@
 package com.isumbcopen.android;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -62,5 +63,7 @@ public class MainActivity extends Activity
 
 	new UpdateTask().execute("http://isumbcopen.com/api");
 	this.status = (TextView)findViewById(R.id.status);
+	Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/umbcfont.ttf");
+	this.status.setTypeface(tf);
     }
 }

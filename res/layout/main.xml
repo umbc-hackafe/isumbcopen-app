@@ -3,12 +3,17 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#ffffff"
     >
 <TextView  
     android:layout_width="fill_parent" 
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
+    android:gravity="center"
     android:id="@+id/status"
+    android:textColor="#000000"
     android:text="UHH"
+    android:textSize="100dp"
+    android:textStyle="bold"
     />
 </LinearLayout>
 
