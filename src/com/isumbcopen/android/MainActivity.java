@@ -46,7 +46,7 @@ public class MainActivity extends Activity
 
 	@Override
 	protected void onPostExecute(String result) {
-	    status.setText(result);
+	    status.setText(result.trim());
 	}
     }
 
