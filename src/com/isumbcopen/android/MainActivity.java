@@ -26,7 +26,7 @@ public class MainActivity extends Activity
 		String version;
 
 		try {
-		    version = getContext().getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+		    version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
 		} catch (Exception e) {
 		    version = "<Unknown>";
 		}
