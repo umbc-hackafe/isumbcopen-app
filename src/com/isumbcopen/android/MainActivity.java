@@ -46,7 +46,11 @@ public class MainActivity extends Activity
 
 	@Override
 	protected void onPostExecute(String result) {
-	    status.setText(result.trim());
+	    if (result != null && result.length() < 15) {
+		status.setText(result.trim());
+	    } else {
+		status.setText("IDK");
+	    }
 	}
     }
 
