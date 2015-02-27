@@ -23,8 +23,17 @@ public class MainActivity extends Activity
 	protected String doInBackground(String... urls) {
 	    String response = "";
 	    for (String url : urls) {
+		String version;
+
+		try {
+		    version = getContext().getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+		} catch (Exception e) {
+		    version = "<Unknown>";
+		}
+
 		DefaultHttpClient client = new DefaultHttpClient();
 		HttpGet httpGet = new HttpGet(url);
+		httpGet.setHeader("User-Agent", "isumbcopen Android App, Version " + version);
 
 		try {
 		    HttpResponse execute = client.execute(httpGet);
